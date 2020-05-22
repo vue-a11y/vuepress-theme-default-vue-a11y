@@ -32,11 +32,17 @@ export default {
 
   mixins: [colorModeMixin],
 
-  mounted () {
-    this.setMainId()
+  watch: {
+    $route: {
+      handler: 'init',
+      immediate: true
+    }
   },
 
   methods: {
+    init () {
+      this.$nextTick(() => this.setMainId())
+    },
     setMainId () {
       const main = document.getElementsByTagName('main')
       if (main.length) main[0].setAttribute('id', 'main')
