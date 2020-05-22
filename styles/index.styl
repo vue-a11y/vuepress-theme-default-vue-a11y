@@ -5,13 +5,14 @@
   --bg-secondary: darken($bg, 2%)
   --bg-search: $bgSearch
   --bg-code: $bgCode
-  --bg-highlighted: $bgCodeBlock
+  --bg-highlighted: darken($bgCodeBlock, 30%)
   --bg-code-block: $bgCodeBlock
   --bg-tip-warning: $bgTipWarning
   --bg-tip-danger: $bgTipDanger
+  --accent-color: $accentColor
   --color: $textColor
   --color-light: lighten($textColor, 26%)
-  --accent-color: $accentColor
+  --text-color-link: $textColorLink
   --accent-color-darken: darken($accentColor, 20%)
   --text-accent-color-button: $textColorAccentButton
   --text-color-code: $textColorCode
@@ -25,9 +26,10 @@ html.dark-mode
   --bg-highlighted: darken($bgCodeBlock, 20%)
   --bg-tip-warning: $darkBgTipWarning
   --bg-tip-danger: $darkBgTipDanger
+  --accent-color: $darkAccentColor
   --color: $darkTextColor
   --color-light: lighten($darkTextColor, 26%)
-  --accent-color: $darkAccentColor
+  --text-color-link: $darkTextColorLink
   --accent-color-darken: darken($darkAccentColor, 20%)
   --text-accent-color-button: $darkTextColorAccentButton
   --text-color-code: $darkTextColorCode
@@ -41,9 +43,10 @@ html.sepia-mode
   --bg-code-block: $sepiaBgCodeBlock
   --bg-tip-warning: $sepiaBgTipWarning
   --bg-tip-danger: $sepiaBgTipDanger
+  --accent-color: $sepiaAccentColor
   --color: $sepiaTextColor
   --color-light: lighten($sepiaTextColor, 26%)
-  --accent-color: $sepiaAccentColor
+  --text-color-link: $sepiaTextColorLink
   --accent-color-darken: darken($sepiaAccentColor, 20%)
   --text-accent-color-button: $sepiaTextColorAccentButton
   --text-color-code: $sepiaTextColorCode
@@ -54,7 +57,7 @@ html, body, .navbar, .sidebar, .links, .sidebar-link, .nav-link
   color: var(--color)
 
 a, .edit-link > a 
-  color: var(--accent-color)
+  color: var(--text-color-link)
 
 hr, tr, td, th
   border-color: var(--border-color)
