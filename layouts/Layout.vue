@@ -4,25 +4,21 @@
       <VueSkipTo />
     </ClientOnly>
     <ParentLayout>
-      <template #sidebar-top>
-        <ClientOnly>
-          <VueDarkMode
-            v-if="isColorModeEnabled"
-            v-show="isColorModeVisible"
-            class="btn-color-mode"
-            v-bind="getColorModeProps"
-          >
-            <template v-slot="{ mode }">
-              Color mode: <span data-cy="color-mode">{{ mode }}</span>
-            </template>
-          </VueDarkMode>
-        </ClientOnly>
-      </template>
-      <template #page-bottom>
-        <ClientOnly>
-          <VueAnnouncer />
-        </ClientOnly>
-      </template>
+      <ClientOnly slot="sidebar-top">
+        <VueDarkMode
+          v-if="isColorModeEnabled"
+          v-show="isColorModeVisible"
+          class="btn-color-mode"
+          v-bind="getColorModeProps"
+        >
+          <template v-slot="{ mode }">
+            Color mode: <span data-cy="color-mode">{{ mode }}</span>
+          </template>
+        </VueDarkMode>
+      </ClientOnly>
+      <ClientOnly slot="page-bottom">
+        <VueAnnouncer />
+      </ClientOnly>
     </ParentLayout>
   </div>
 </template>
