@@ -1,5 +1,7 @@
 # Test page
 
+**WORK IN PROGRESS**
+
 ::: figurecode my caption
 ```html
 <button aria-label="close" aria-describedby="descriptionClose">X</button>

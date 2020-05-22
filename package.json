@@ -1,13 +1,24 @@
 {
   "name": "vuepress-theme-default-vue-a11y",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Vuepress theme for vue-a11y documentation",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/vuepress dev docs",
-    "build": "./node_modules/.bin/vuepress build docs",
-    "start": "nodemon --ext js,md,vue,styl --watch .vuepress --watch . --exec npm run dev"
+    "start": "nodemon --ext js,md,vue,styl --watch .vuepress --watch . --exec npm run docs:dev",
+    "docs:dev": "./node_modules/.bin/vuepress dev docs",
+    "docs:build": "./node_modules/.bin/vuepress build docs --no-cache",
+    "docs:publish": "surge docs/.vuepress/dist https://vue-a11y-theme.surge.sh",
+    "release": "standard-version",
+    "project:publish": "git push --tags origin master && npm publish"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vue-a11y/vuepress-theme-default-vue-a11y.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/issues"
+  },
+  "homepage": "https://github.com/vue-a11y/vuepress-theme-default-vue-a11y#readme",
   "author": "Alan Ktquez <ktquez@gmail.com> (https://github.com/ktquez)",
   "license": "MIT",
   "dependencies": {
@@ -28,6 +39,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vuejs-accessibility": "^0.1.2",
     "nodemon": "^2.0.4",
+    "standard-version": "^8.0.0",
     "vuepress": "^1.5.0"
   }
 }

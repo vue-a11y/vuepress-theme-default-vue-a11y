@@ -1,21 +1,27 @@
 <template>
   <div>
-    <VueSkipTo />
+    <ClientOnly>
+      <VueSkipTo />
+    </ClientOnly>
     <ParentLayout>
       <template #sidebar-top>
-        <VueDarkMode
-          v-if="isColorModeEnabled"
-          v-show="isColorModeVisible"
-          class="btn-color-mode"
-          v-bind="getColorModeProps"
-        >
-          <template v-slot="{ mode }">
-            Color mode: <span data-cy="color-mode">{{ mode }}</span>
-          </template>
-        </VueDarkMode>
+        <ClientOnly>
+          <VueDarkMode
+            v-if="isColorModeEnabled"
+            v-show="isColorModeVisible"
+            class="btn-color-mode"
+            v-bind="getColorModeProps"
+          >
+            <template v-slot="{ mode }">
+              Color mode: <span data-cy="color-mode">{{ mode }}</span>
+            </template>
+          </VueDarkMode>
+        </ClientOnly>
       </template>
       <template #page-bottom>
-        <VueAnnouncer />
+        <ClientOnly>
+          <VueAnnouncer />
+        </ClientOnly>
       </template>
     </ParentLayout>
   </div>
@@ -33,10 +39,11 @@ export default {
   mixins: [colorModeMixin],
 
   watch: {
-    $route: {
-      handler: 'init',
-      immediate: true
-    }
+    $route: 'init'
+  },
+
+  mounted () {
+    this.init()
   },
 
   methods: {

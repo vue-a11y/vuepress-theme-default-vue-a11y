@@ -6,7 +6,7 @@ module.exports = {
   ],
   themeConfig: {
     home: false,
-    repo: 'vue-a11y/vuepress-theme-vue-a11y-docs',
+    repo: 'vue-a11y/vuepress-theme-default-vue-a11y',
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
