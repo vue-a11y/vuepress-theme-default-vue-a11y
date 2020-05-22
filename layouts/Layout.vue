@@ -41,11 +41,23 @@ export default {
 
   methods: {
     init () {
-      this.$nextTick(() => this.setMainId())
+      this.$nextTick(() => {
+        this.setMainId()
+        this.setWarningInExternalLinks()
+      })
     },
     setMainId () {
       const main = document.getElementsByTagName('main')
       if (main.length) main[0].setAttribute('id', 'main')
+    },
+    setWarningInExternalLinks () {
+      const links = document.querySelectorAll('a[target="_blank"]')
+      if (!links.length) return
+      links.forEach(link => {
+        const textContent = link.textContent.trim()
+        const warning = `<span class="visually-hidden">, ${this.$themeLocaleConfig.warningExternalLinkText || 'opens in a new window'}</span>`
+        link.innerHTML = link.innerHTML.replace(textContent, `${textContent} ${warning}`)
+      })
     }
   }
 }

@@ -23,6 +23,8 @@ export default {
 }
 ```
 
+[External Link](https://google.com)
+
 ---
 
 ::: tip
@@ -57,6 +59,8 @@ This is a details block, which does not work in IE / Edge
 :tada: :100:
 
 ---
+
+[External Link](https://google.com)
 
 ::: danger STOP
 Danger zone, do not proceed
