@@ -4,12 +4,14 @@
 ```html
 <button aria-label="close" aria-describedby="descriptionClose">X</button>
 <div id="descriptionClose" hidden>
-  Se você cancelar perderá as informações inseridas no campo XXX e será 
-  enviado para a página anterior.
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 </div>
 ```
 :::
 
+---
+
+It is a long established fact `that a reader will` be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
 
 ---
 
@@ -23,7 +25,7 @@ export default {
 }
 ```
 
-[External Link](https://google.com)
+[Internal Link](/guide)
 
 ---
 

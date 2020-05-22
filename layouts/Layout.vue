@@ -70,7 +70,7 @@ export default {
   margin-top: 1.5rem
   margin-left: 1.5rem
   &.vue-dark-mode
-    border: 2px solid #666
+    border: 2px solid var(--border-color)
     border-radius: 6px
     padding: 8px 14px
     font-weight: bold

@@ -2,7 +2,7 @@
 
 :root
   --bg: $bg
-  --bg-secondary: darken($bg, 2%)
+  --bg-secondary: $bgSecondary
   --bg-search: $bgSearch
   --bg-code: $bgCode
   --bg-highlighted: darken($bgCodeBlock, 30%)
@@ -20,7 +20,7 @@
 
 html.dark-mode
   --bg: $darkBg
-  --bg-secondary: darken($darkBg, 20%)
+  --bg-secondary: $darkBgSecondary
   --bg-search: $darkBgSearch
   --bg-code: $darkBgCode
   --bg-highlighted: darken($bgCodeBlock, 20%)
@@ -37,7 +37,7 @@ html.dark-mode
 
 html.sepia-mode
   --bg: $sepiaBg
-  --bg-secondary: darken($sepiaBg, 14%)
+  --bg-secondary: $sepiaBgSecondary
   --bg-search: $sepiaBgSearch
   --bg-code: $sepiaBgCode
   --bg-code-block: $sepiaBgCodeBlock
@@ -45,7 +45,8 @@ html.sepia-mode
   --bg-tip-danger: $sepiaBgTipDanger
   --accent-color: $sepiaAccentColor
   --color: $sepiaTextColor
-  --color-light: lighten($sepiaTextColor, 26%)
+  --color-light: lighten($sepiaTextColor, 10%)
+  --color-light-25: lighten($sepiaTextColor, 25%)
   --text-color-link: $sepiaTextColorLink
   --accent-color-darken: darken($sepiaAccentColor, 20%)
   --text-accent-color-button: $sepiaTextColorAccentButton
@@ -58,6 +59,9 @@ html, body, .navbar, .sidebar, .links, .sidebar-link, .nav-link
 
 a, .edit-link > a 
   color: var(--text-color-link)
+
+a > .icon.outbound
+  color: inherit
 
 hr, tr, td, th
   border-color: var(--border-color)

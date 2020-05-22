@@ -6,46 +6,46 @@ $bg ?= #fff
 $darkBg ?= #232b32
 $sepiaBg ?= #f1e7d0
 
-$bgSecondary ?= #f2f2f2
-$darkBgSecondary ?= #1d242d
-// $sepiaBgSecondary ?= 
+$bgSecondary ?= darken($bg, 2%)
+$darkBgSecondary ?= darken($darkBg, 20%)
+$sepiaBgSecondary ?= darken($sepiaBg, 6%)
 
-$bgSearch ?= #f2f2f2
-$darkBgSearch ?= #282f34
-// $sepiaBgSearch ?= 
+$bgSearch ?= #f8f8f8
+$darkBgSearch ?= #1c2228
+$sepiaBgSearch ?= #ebdcbb
 
-$bgCode ?= #f8f8f8
-$darkBgCode ?= #1d242d
-// $sepiaBgCode ?= 
+$bgCode ?= $bgSecondary
+$darkBgCode ?= $darkBgSecondary
+$sepiaBgCode ?= $sepiaBgSecondary
 
 $bgCodeBlock ?= #1e252b
 $darkBgCodeBlock ?= #1e252b
-// $sepiaBgCodeBlock ?= 
+$sepiaBgCodeBlock ?= #1e252b
 
 $bgTipWarning ?= #fff7d0
 $darkBgTipWarning ?= #575638
-// $sepiaBgTipWarning ?= 
+$sepiaBgTipWarning ?= #eedbb3
 
 $bgTipDanger ?= #ffe6e6
 $darkBgTipDanger ?= #321b22
-// $sepiaBgTipDanger ?= 
+$sepiaBgTipDanger ?= #e7c7a9
 
 $textColor ?= #304455
 $darkTextColor ?= #ddd8ca
-$sepiaTextColor ?= #504231
+$sepiaTextColor ?= #433422
 
 $textColorCode ?= #9E2500
 $darkTextColorCode ?= #ADCFF0
-// $sepiaTextColorCode ?= 
+$sepiaTextColorCode ?= #964217
 
-$textColorAccentButton ?= $bg
+$textColorAccentButton ?= $darkBg
 $darkTextColorAccentButton ?= $darkBg
-// $sepiaTextColorAccentButton ?= 
+$sepiaTextColorAccentButton ?= $darkBg
 
 $textColorLink ?= #2E8465
 $darkTextColorLink ?= #82D3AF
-// $sepiaTextColorLink ?= 
+$sepiaTextColorLink ?= #9F4519
 
 $borderColor ?= #eaecef
 $darkBorderColor ?= #565656
-// $sepiaBorderColor ?= 
+$sepiaBorderColor ?= #e0c894

@@ -30,12 +30,14 @@
 a.nav-link
   &:hover, &.router-link-active
     color var(--text-color-link)
-    border-color: var(--accent-color) !important
+    border-color: var(--text-color-link) !important
 
 .search-box 
   input 
-    background-color: var(--bg)
+    background-color: var(--bg-search)
     color: var(--color)
+    border-color: var(--border-color)
+    font-weight: bold
 
     &:focus
       border-color: var(--accent-color)
