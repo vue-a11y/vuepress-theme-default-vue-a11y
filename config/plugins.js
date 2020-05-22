@@ -22,6 +22,7 @@ module.exports = [
           // see more: https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html
           return `
           <figure
+            role="figure"
             aria-label="${caption}"
             class="figurecode"
           >
