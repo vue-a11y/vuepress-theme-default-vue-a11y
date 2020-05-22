@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.2...v0.1.3) (2020-05-22)
+
+
+### Bug Fixes
+
+* Use slot in ClientOnly component ([4a4b46e](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/4a4b46e92835c3b8ed4c5aed2de10a0b8feb0a03))
+
 ### 0.1.2 (2020-05-22)
 
 ### 0.1.1 (2020-05-22)
