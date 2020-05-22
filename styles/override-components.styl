@@ -1,0 +1,89 @@
+.home
+  .hero
+    .description
+      color: var(--color-light)
+
+    .action-button
+      background-color: var(--accent-color)
+      color: var(--text-accent-color-button)
+
+      &:hover
+        background-color: var(--accent-color-darken)
+    
+  .features
+    h2, p
+      color: inherit
+
+  .features, .footer
+    color: var(--color)
+    border-top-color var(--border-color)
+
+.navbar .site-name
+  color: var(--color)
+
+.navbar .links
+  background var(--bg)
+
+.nav-links .repo-link:hover
+  color var(--accent-color)
+
+a.nav-link
+  &:hover, &.router-link-active
+    color var(--accent-color)
+    border-color: var(--accent-color) !important
+
+.search-box 
+  input 
+    background-color: var(--bg)
+    color: var(--color)
+
+    &:focus
+      border-color: var(--accent-color)
+
+  .suggestions
+    background-color: var(--bg-secondary)
+    border-color: var(--border-color)
+    border-radius: 0 0 2px 2px
+    border-top: 0
+
+    .suggestion
+      a
+        color: var(--color)
+
+      &:hover, &.focused
+        background-color: var(--bg)
+
+        a
+          color: var(--accent-color)
+
+a.sidebar-link
+  color var(--color)
+
+  &:hover, &.active
+    color var(--accent-color)
+
+  &.active
+    border-left-color var(--accent-color)
+
+.custom-block
+  .custom-block-title
+    color: inherit !important
+
+  &.warning
+    color: var(--color)
+    background-color: var(--bg-tip-warning)
+  
+  &.danger
+    background-color: var(--bg-tip-danger)
+
+  &.details, &.danger, &.danger > .custom-block-title
+    color: var(--color)
+
+  &.tip, &.details
+    background-color: var(--bg-secondary)
+
+.page-edit .edit-link > a
+  color var(--accent-color)
+  
+.navbar, .sidebar, .sidebar .nav-links
+  border-color: var(--border-color)

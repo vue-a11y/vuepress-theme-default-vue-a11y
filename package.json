@@ -1,0 +1,33 @@
+{
+  "name": "vuepress-theme-default-vue-a11y",
+  "version": "1.0.0",
+  "description": "Vuepress theme for vue-a11y documentation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/vuepress dev docs",
+    "build": "./node_modules/.bin/vuepress build docs",
+    "start": "nodemon --ext js,md,vue,styl --watch .vuepress --watch . --exec npm run dev"
+  },
+  "author": "Alan Ktquez <ktquez@gmail.com> (https://github.com/ktquez)",
+  "license": "MIT",
+  "dependencies": {
+    "@vue-a11y/announcer": "^2.0.2",
+    "@vue-a11y/dark-mode": "^0.2.0",
+    "a11y-css-reset": "^1.2.0",
+    "vue-skip-to": "^1.0.6",
+    "vuepress-plugin-code-copy": "^1.0.6"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vuejs-accessibility": "^0.1.2",
+    "nodemon": "^2.0.4",
+    "vuepress": "^1.5.0"
+  }
+}

@@ -1,0 +1,73 @@
+.content__default
+  .figurecode
+    margin: 20px 0 30px
+    padding: 0
+    position: relative
+    
+    &__caption
+      text-align: center
+      width: 100%
+      font-size: smaller
+      font-style: italic
+
+    &__content
+      position: relative
+
+  div[class*=language-]
+    background-color: var(--bg-code-block)
+
+    .highlight-lines
+      padding-top: 3.2rem
+
+      .highlighted
+        background-color: var(--bg-highlighted)
+
+    &:before
+      color: #fff
+      top: 16px
+      right: 1.35em
+
+  pre[class*=language-]
+      padding: 3.2rem 1.1rem 1.5rem
+      margin: .3em 0;
+      overflow: auto
+      border-radius: 0.7rem
+
+      code
+        margin: 0
+        padding: 0
+        color: inherit
+
+        &:before
+          position: absolute
+          top: 18px
+          left: 18px
+          content: ''
+          width: 10px
+          height: 10px
+          border-radius: 50%
+          background-color: #ff5f56
+          box-shadow: 16px 0 0 0 #ffbd2e, 32px 0 0 0 #27c93f
+          opacity: .5
+
+      .code-copy 
+        color: #fff
+        > svg 
+          right: 15px
+      
+      .code-copy > svg, .code-copy > span
+        bottom: 15px !important
+
+  .details
+    div[class*=language-]
+      background-color: var(--bg-highlighted)
+      margin-top: 10px;
+
+    pre[class*=language-]
+      padding: 1.2rem 1.1rem
+
+      code:before
+        display: none
+        
+    .code-copy
+      display: none

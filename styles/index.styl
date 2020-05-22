@@ -1,0 +1,70 @@
+@require './palette.styl'
+
+:root
+  --bg: $bg
+  --bg-secondary: darken($bg, 2%)
+  --bg-search: $bgSearch
+  --bg-code: $bgCode
+  --bg-highlighted: $bgCodeBlock
+  --bg-code-block: $bgCodeBlock
+  --bg-tip-warning: $bgTipWarning
+  --bg-tip-danger: $bgTipDanger
+  --color: $textColor
+  --color-light: lighten($textColor, 26%)
+  --accent-color: $accentColor
+  --accent-color-darken: darken($accentColor, 20%)
+  --text-accent-color-button: $textColorAccentButton
+  --text-color-code: $textColorCode
+  --border-color: $borderColor
+
+html.dark-mode
+  --bg: $darkBg
+  --bg-secondary: darken($darkBg, 20%)
+  --bg-search: $darkBgSearch
+  --bg-code: $darkBgCode
+  --bg-highlighted: darken($bgCodeBlock, 20%)
+  --bg-tip-warning: $darkBgTipWarning
+  --bg-tip-danger: $darkBgTipDanger
+  --color: $darkTextColor
+  --color-light: lighten($darkTextColor, 26%)
+  --accent-color: $darkAccentColor
+  --accent-color-darken: darken($darkAccentColor, 20%)
+  --text-accent-color-button: $darkTextColorAccentButton
+  --text-color-code: $darkTextColorCode
+  --border-color: $darkBorderColor
+
+html.sepia-mode
+  --bg: $sepiaBg
+  --bg-secondary: darken($sepiaBg, 14%)
+  --bg-search: $sepiaBgSearch
+  --bg-code: $sepiaBgCode
+  --bg-code-block: $sepiaBgCodeBlock
+  --bg-tip-warning: $sepiaBgTipWarning
+  --bg-tip-danger: $sepiaBgTipDanger
+  --color: $sepiaTextColor
+  --color-light: lighten($sepiaTextColor, 26%)
+  --accent-color: $sepiaAccentColor
+  --accent-color-darken: darken($sepiaAccentColor, 20%)
+  --text-accent-color-button: $sepiaTextColorAccentButton
+  --text-color-code: $sepiaTextColorCode
+  --border-color: $sepiaBorderColor
+
+html, body, .navbar, .sidebar, .links, .sidebar-link, .nav-link 
+  background-color: var(--bg)
+  color: var(--color)
+
+a, .edit-link > a 
+  color: var(--accent-color)
+
+hr, tr, td, th
+  border-color: var(--border-color)
+
+tr:nth-child(even)
+  background-color: var(--bg-secondary)
+
+h2
+  border-color: var(--border-color)
+
+.page code 
+  background-color: var(--bg-code)
+  color: var(--text-color-code)
