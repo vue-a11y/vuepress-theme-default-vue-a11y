@@ -3,7 +3,12 @@
     <VueSkipTo />
     <ParentLayout>
       <template #sidebar-top>
-        <VueDarkMode class="btn-color-mode">
+        <VueDarkMode
+          v-if="isColorModeEnabled"
+          v-show="isColorModeVisible"
+          class="btn-color-mode"
+          v-bind="getColorModeProps"
+        >
           <template v-slot="{ mode }">
             Color mode: <span data-cy="color-mode">{{ mode }}</span>
           </template>
@@ -17,12 +22,15 @@
 </template>
 
 <script>
+import colorModeMixin from '../mixins/colorMode'
 import ParentLayout from '@parent-theme/layouts/Layout.vue'
 
 export default {
   components: {
     ParentLayout
   },
+
+  mixins: [colorModeMixin],
 
   mounted () {
     this.setMainId()

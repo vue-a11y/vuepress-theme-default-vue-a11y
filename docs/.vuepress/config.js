@@ -10,13 +10,18 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
-    // TODO: Fazer o color mode seja totalmente flexível através daqui e dos locales
-    colorMode: {},
-    // TODO: Fazer o skip-to seja totalmente flexível através daqui e dos locales
-    skipTo: {},
+    colorMode: {
+      props: {
+        modes: [ 'light', 'dark', 'system', 'sepia' ]
+      }
+    },
     locales: {
       '/': {
         editLinkText: 'Edit this page on GitHub',
+        colorMode: {
+          ariaLabel: 'toggle to %cm mode color, please',
+          ariaLive: '%cm color mode is enabled, yeahh'
+        },
         nav: [
           {
             text: 'Guide',
