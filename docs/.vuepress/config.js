@@ -19,8 +19,8 @@ module.exports = {
       '/': {
         editLinkText: 'Edit this page on GitHub',
         colorMode: {
-          ariaLabel: 'toggle to %cm mode color, please',
-          ariaLive: '%cm color mode is enabled, yeahh'
+          ariaLabel: 'toggle to %cm mode color',
+          ariaLive: '%cm color mode is enabled'
         },
         nav: [
           {

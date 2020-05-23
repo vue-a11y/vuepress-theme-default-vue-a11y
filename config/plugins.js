@@ -18,8 +18,6 @@ module.exports = [
         const m = tokens[idx].info.trim().match(/^figurecode\s+(.*)$/)
         if (tokens[idx].nesting === 1) {
           caption = m ? md.utils.escapeHtml(m[1]) : ''
-          // aria-label for macOS VoiceOver + Chrome
-          // see more: https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html
           return `
           <figure-code caption="${caption}">
             <div slot="content">

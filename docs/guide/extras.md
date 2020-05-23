@@ -40,7 +40,7 @@ The `<figure>` element can also be used for code blocks, so we've added a way fo
 
 This theme automatically adds a warning to screen reader users that the external link will "opens in a new window".
 
-The solution adds programmatically and is a time-consuming solution, but it helps with completion.
+It is a temporary solution until we create a way to add the notice inside the external link through the markup generator itself.
 
 <blockquote>
   <p>
@@ -58,6 +58,8 @@ The solution adds programmatically and is a time-consuming solution, but it help
 ```
 [External Link](https://vue-a11y.com)
 ```
+
+**Output**
 
 [External Link](https://vue-a11y.com)
 
