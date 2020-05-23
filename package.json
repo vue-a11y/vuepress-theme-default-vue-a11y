@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-default-vue-a11y",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Vuepress theme for vue-a11y documentation",
   "main": "index.js",
   "scripts": {
