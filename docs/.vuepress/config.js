@@ -34,7 +34,11 @@ module.exports = {
             title: 'Guide',
             collapsable: false,
             children: [
-              '/guide/'
+              '/guide/',
+              '/guide/config.md',
+              '/guide/styles.md',
+              '/guide/extras.md',
+              '/guide/markdown.md'
             ]
           }
         ]

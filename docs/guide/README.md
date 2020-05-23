@@ -1,77 +1,26 @@
-# Test page
+# Setup
 
-**WORK IN PROGRESS**
+We created a vuepress theme to facilitate the maintenance of the documentation for Vue-a11y, it is a work in progress, but it is available for anyone who wants to use and contribute.
 
-::: figurecode my caption
-```html
-<button aria-label="close" aria-describedby="descriptionClose">X</button>
-<div id="descriptionClose" hidden>
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-</div>
-```
-:::
+It does not replace the default vuepress theme, however, this theme contains most Vue-a11y packages and some plugins to improve semantics and accessibility in the documentation.
 
----
+## Installation
 
-It is a long established fact `that a reader will` be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here
+### NPM
 
----
-
-``` js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+```shell
+npm install -D vuepress-theme-default-vue-a11y
+# or
+yarn add -D vuepress-theme-default-vue-a11y
 ```
 
-[Internal Link](/guide)
+## Usage
 
----
+You just need to add the theme to your `.vuepress/config.js` file.
 
-::: tip
-This is a tip
-:::
-
-::: warning
-This is a warning
-:::
-
-::: danger
-This is a dangerous warning
-:::
-
-::: details
-This is a details block, which does not work in IE / Edge
-:::
-
----
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-
----
-
-:tada: :100:
-
----
-
-[External Link](https://google.com)
-
-::: danger STOP
-Danger zone, do not proceed
-:::
-
-::: details Click me to view the code
-```js
-console.log('Hello, VuePress!')
+```javascript
+// e.g. docs/.vuepress/config.js
+module.exports = {
+  theme: 'vuepress-theme-default-vue-a11y', // or 'default-vue-a11y'
+  // ...
 ```
-:::
