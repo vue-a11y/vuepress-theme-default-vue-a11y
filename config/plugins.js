@@ -21,20 +21,17 @@ module.exports = [
           // aria-label for macOS VoiceOver + Chrome
           // see more: https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html
           return `
-          <figure
-            role="figure"
-            aria-label="${caption}"
-            class="figurecode"
-          >
-            <div class="figurecode__content">
+          <figure-code caption="${caption}">
+            <div slot="content">
         `
         } else {
           return `
             </div>
-            <figcaption class="figurecode__caption">
-              ${caption}
-            </figcaption>
-          </figure>
+            <figure-code-caption
+              slot="caption"
+              caption="${caption}"
+            />            
+          </figure-code>
         `
         }
       }
