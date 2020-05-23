@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.3...v0.1.4) (2020-05-23)
+
+
+### Bug Fixes
+
+* override styles ([411a258](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/411a2589fd2f0d5063fbc1d20486f6116e2d515c))
+
 ### [0.1.3](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.2...v0.1.3) (2020-05-22)
 
 
