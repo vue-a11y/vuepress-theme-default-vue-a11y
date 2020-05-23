@@ -67,7 +67,7 @@ a.sidebar-link
   &.active
     border-left-color var(--accent-color)
 
-.custom-block
+div.custom-block
   .custom-block-title
     color: inherit !important
 
@@ -78,10 +78,15 @@ a.sidebar-link
   &.danger
     background-color: var(--bg-tip-danger)
 
-  &.details, &.danger, &.danger > .custom-block-title
+  &.danger, &.danger > .custom-block-title
     color: var(--color)
+  
+  &.tip
+    background-color: var(--bg-secondary)
 
-  &.tip, &.details
+details.custom-block
+  &.details
+    color: var(--color)
     background-color: var(--bg-secondary)
 
 .page-edit .edit-link > a
