@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.5...v0.1.7) (2020-05-24)
+
+* Add custom max width content ([89e35de](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/89e35dead55cf0c9fb3c340ea3b0015054ca728a))
+* Custom color mode button ([7a0196d](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/7a0196d05de1a927a26086dfaf81a820782b6e4a))
+* Custom outline ([289a820](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/289a820ef662fad0f05ecfb819403e50910f043e))
+
 ### [0.1.6](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.5...v0.1.6) (2020-05-23)
 
 ### [0.1.5](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.4...v0.1.5) (2020-05-23)
