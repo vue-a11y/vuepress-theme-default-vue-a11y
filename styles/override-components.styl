@@ -40,7 +40,7 @@ a.nav-link
     font-weight: bold
 
     &:focus
-      border-color: var(--accent-color)
+      border: 2px solid var(--accent-color)
 
   .suggestions
     background-color: var(--bg-secondary)
@@ -57,6 +57,17 @@ a.nav-link
 
         a
           color: var(--text-color-link)
+
+.sidebar-links
+  > li
+    margin: 6px 0
+
+    .sidebar-sub-headers
+      margin-top: 5px
+
+      .sidebar-sub-header
+        margin-bottom: 5px
+        width: 96%
 
 a.sidebar-link
   color var(--color)
@@ -94,3 +105,7 @@ details.custom-block
   
 .navbar, .sidebar, .sidebar .nav-links
   border-color: var(--border-color)
+
+.page-nav
+  > .inner
+    padding-bottom: 2px

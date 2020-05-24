@@ -17,6 +17,7 @@
   --text-accent-color-button: $textColorAccentButton
   --text-color-code: $textColorCode
   --border-color: $borderColor
+  --outline-color: $outlineColor
 
 html.dark-mode
   --bg: $darkBg
@@ -34,6 +35,7 @@ html.dark-mode
   --text-accent-color-button: $darkTextColorAccentButton
   --text-color-code: $darkTextColorCode
   --border-color: $darkBorderColor
+  --outline-color: $darkOutlineColor
 
 html.sepia-mode
   --bg: $sepiaBg
@@ -52,10 +54,15 @@ html.sepia-mode
   --text-accent-color-button: $sepiaTextColorAccentButton
   --text-color-code: $sepiaTextColorCode
   --border-color: $sepiaBorderColor
+  --outline-color: $sepiaOutlineColor
 
 html, body, .navbar, .sidebar, .links, .sidebar-link, .nav-link 
   background-color: var(--bg)
   color: var(--color)
+
+:focus
+  outline: 2px solid var(--outline-color)
+  outline-offset: 3px
 
 a, .edit-link > a 
   color: var(--text-color-link)
