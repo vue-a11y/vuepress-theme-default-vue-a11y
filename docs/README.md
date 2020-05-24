@@ -1,13 +1,4 @@
----
-footer: MIT Licensed | With 💖 and Vuepress
----
-
 # Introduction
-
-<p>
-  <img src="https://avatars0.githubusercontent.com/u/38933658?s=200&v=4" alt="logo of vue-awesome repository">
-  <br>
-</p>
 
 We created a vuepress theme to facilitate the maintenance of the documentation for Vue-a11y, it is a work in progress, but it is available for anyone who wants to use and contribute.
 
