@@ -70,13 +70,17 @@ export default {
 <style lang="stylus" src="../styles/override-components.styl"></style>
 <style lang="stylus">
 .btn-color-mode
-  margin-top: 1.5rem
+  margin-top: 2.2rem
   margin-left: 1.5rem
   &.vue-dark-mode
     border: 2px solid var(--border-color)
-    border-radius: 6px
-    padding: 8px 14px
+    background-color: var(--bg-secondary)
+    border-radius: 2rem
+    padding: 10px 16px
     font-weight: bold
+    outline: none
+    &:focus
+      border-color: var(--accent-color)
     span
       text-transform: capitalize
 </style>
