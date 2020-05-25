@@ -22,6 +22,9 @@ module.exports = {
           ariaLabel: 'toggle to %cm mode color',
           ariaLive: '%cm color mode is enabled'
         },
+        announcer: {
+          complementRoute: 'has loaded'
+        },
         nav: [
           {
             text: 'Guide',

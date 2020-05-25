@@ -47,12 +47,15 @@ export default {
       this.$nextTick(() => {
         this.setMainId()
         this.setWarningInExternalLinks()
+        this.setComplementRouteToAnnouncer()
       })
     },
+
     setMainId () {
       const main = document.getElementsByTagName('main')
       if (main.length) main[0].setAttribute('id', 'main')
     },
+
     setWarningInExternalLinks () {
       const links = document.querySelectorAll('a[target="_blank"]')
       if (!links.length) return
@@ -61,6 +64,12 @@ export default {
         const warning = `<span class="visually-hidden">, ${this.$themeLocaleConfig.warningExternalLinkText || 'opens in a new window'}</span>`
         link.innerHTML = link.innerHTML.replace(textContent, `${textContent} ${warning}`)
       })
+    },
+
+    setComplementRouteToAnnouncer () {
+      if (this.$themeLocaleConfig.announcer) {
+        this.$announcer.setComplementRoute(this.$themeLocaleConfig.announcer.complementRoute)
+      }
     }
   }
 }

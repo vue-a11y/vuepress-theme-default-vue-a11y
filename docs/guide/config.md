@@ -39,18 +39,21 @@ module.exports = {
     // ...
     locales: {
       '/': {
+        // ...
         colorMode: {
           ariaLabel: 'toggle to %cm mode color',
           ariaLive: '%cm color mode is enabled'
         }
       },
       '/pt': {
+        // ...
         colorMode: {
           ariaLabel: 'Trocar para o modo de cor %cm',
           ariaLive: 'Modo de cor %cm está habilitado'
         }
       },
       '/es': {
+        // ...
         colorMode: {
           ariaLabel: 'Cambiar al modo de color %cm',
           ariaLive: 'Se eligió el modo de color %cm'
@@ -66,4 +69,38 @@ Pretty soon
 
 ## Announcer
 
-Pretty soon
+The [@vue-a11y/announcer](https://github.com/vue-a11y/vue-announcer) provides an easy way for people using screen readers to know what’s going on in your app.
+
+It is already installed and configured in the theme to announce the routes changes.
+
+You can configure the title add-on according to the location, by default the value is `has loaded`.
+
+```javascript
+// e.g. docs/.vuepress/config.js
+module.exports = {
+  theme: 'vuepress-theme-default-vue-a11y',
+  // ...
+  themeConfig: {
+    // ...
+    locales: {
+      '/': {
+        // ...
+        announcer: {                          
+          complementRoute: 'has loaded'       // optional
+        }
+      },
+      '/pt': {
+        // ...
+        announcer: {
+          complementRoute: 'foi carregado'
+        }
+      },
+      '/es': {
+        // ...
+        announcer: {
+          complementRoute: 'ha cargado'
+        }
+      }
+    }
+  }
+```
