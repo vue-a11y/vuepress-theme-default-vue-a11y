@@ -70,7 +70,7 @@ export default {
 <style lang="stylus" src="../styles/override-components.styl"></style>
 <style lang="stylus">
 .btn-color-mode
-  margin-top: 2.2rem
+  margin-top: 2.75rem
   margin-left: 1.5rem
   &.vue-dark-mode
     border: 2px solid var(--border-color)
