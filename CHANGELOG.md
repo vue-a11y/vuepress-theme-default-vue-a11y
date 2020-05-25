@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.5...v0.1.8) (2020-05-25)
+
+
+### Features
+
+* Custom announcer complementRoute by locale ([a3aaf46](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/a3aaf46ab94e53efaa5e848639bcdc6dfac45610))
+
 ### [0.1.7](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.5...v0.1.7) (2020-05-24)
 
 * Add custom max width content ([89e35de](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/89e35dead55cf0c9fb3c340ea3b0015054ca728a))
