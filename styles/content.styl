@@ -1,17 +1,9 @@
-div.content__default
-  .figurecode
-    margin: 20px 0 30px
-    padding: 0
-    position: relative
-    
-    &__caption
-      text-align: center
-      width: 100%
-      font-size: smaller
-      font-style: italic
+div.theme-default-content
+  a
+    text-decoration: underline
 
-      a
-        text-decoration: underline
+  &:not(.custom) a:hover
+    text-decoration: none
 
   li
     word-break: break-word
@@ -78,3 +70,17 @@ div.content__default
         
     .code-copy
       display: none
+
+  .figurecode
+    margin: 20px 0 30px
+    padding: 0
+    position: relative
+    
+    &__caption
+      text-align: center
+      width: 100%
+      font-size: smaller
+      font-style: italic
+
+      a
+        text-decoration: underline
