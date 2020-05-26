@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "./node_modules/.bin/vuepress dev docs --no-cache",
-    "docs:build": "./node_modules/.bin/vuepress build docs --no-cache",
-    "docs:publish": "surge docs/.vuepress/dist https://vue-a11y-theme.surge.sh",
+    "docs:build": "./node_modules/.bin/vuepress build docs --no-cache && echo theme.vue-a11y.com >> docs/.vuepress/dist/CNAME",
+    "docs:publish": "gh-pages -d docs/.vuepress/dist",
     "release": "standard-version",
     "project:publish": "git push --tags origin master && npm publish"
   },
@@ -37,6 +37,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vuejs-accessibility": "^0.1.2",
+    "gh-pages": "^2.2.0",
     "standard-version": "^8.0.0",
     "vuepress": "^1.5.0",
     "watchpack": "^1.6.1"
