@@ -1,0 +1,21 @@
+div.custom-block
+  .custom-block-title
+    color: inherit !important
+
+  &.warning
+    color: var(--color)
+    background-color: var(--bg-tip-warning)
+  
+  &.danger
+    background-color: var(--bg-tip-danger)
+
+  &.danger, &.danger > .custom-block-title
+    color: var(--color)
+  
+  &.tip
+    background-color: var(--bg-secondary)
+
+details.custom-block
+  &.details
+    color: var(--color)
+    background-color: var(--bg-secondary)

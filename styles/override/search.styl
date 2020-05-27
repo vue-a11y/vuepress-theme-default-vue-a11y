@@ -1,0 +1,26 @@
+.search-box 
+  input 
+    background-position: .6rem .4rem
+    background-color: var(--bg-search)
+    color: var(--color)
+    border: 2px solid var(--border-color)
+    font-weight: bold
+
+    &:focus
+      border-color: var(--accent-color)
+
+  .suggestions
+    background-color: var(--bg-secondary)
+    border-color: var(--border-color)
+    border-radius: 0 0 2px 2px
+    border-top: 0
+
+    .suggestion
+      a
+        color: var(--color)
+
+      &:hover, &.focused
+        background-color: var(--bg)
+
+        a
+          color: var(--text-color-link)

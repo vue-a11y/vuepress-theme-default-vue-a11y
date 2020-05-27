@@ -1,0 +1,17 @@
+@require './home.styl'
+@require './custom-block.styl'
+@require './search.styl'
+@require './sidebar.styl'
+
+.page-edit .edit-link > a
+  color var(--text-color-link)
+  
+.navbar, .sidebar, .sidebar .nav-links
+  border-color: var(--border-color) !important
+
+.page-nav
+  > .inner
+    padding-bottom: 2px
+
+.theme-default-content:not(.custom), .page-edit, .page-nav 
+  max-width: var(--content-max-width)

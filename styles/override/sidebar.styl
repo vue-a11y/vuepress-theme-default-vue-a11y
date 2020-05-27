@@ -1,0 +1,27 @@
+.sidebar-links
+  > li
+    margin: 6px 0
+
+    .sidebar-sub-headers
+      margin-top: 5px
+
+      .sidebar-sub-header
+        margin-bottom: 5px
+        width: 95%
+
+a.sidebar-link
+  color var(--color)
+
+  &:hover, &.active
+    color var(--text-color-link)
+
+  &.active
+    border-left-color var(--accent-color)
+
+@media (max-width: $MQMobile)
+  .theme-container.sidebar-open .sidebar
+    visibility: visible
+
+  .sidebar
+      visibility: hidden
+      transition: transform .2s ease, visibility .2s
