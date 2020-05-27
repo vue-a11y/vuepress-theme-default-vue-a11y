@@ -48,6 +48,7 @@ export default {
         this.setMainId()
         this.setWarningInExternalLinks()
         this.setComplementRouteToAnnouncer()
+        this.setTabIndexSidebarButton()
       })
     },
 
@@ -70,6 +71,13 @@ export default {
       if (this.$themeLocaleConfig.announcer) {
         this.$announcer.setComplementRoute(this.$themeLocaleConfig.announcer.complementRoute)
       }
+    },
+
+    setTabIndexSidebarButton () {
+      const el = document.querySelector('.sidebar-button')
+      if (!el) return
+      el.setAttribute('tabindex', 0)
+      el.setAttribute('aria-label', 'Open Sidebar Navigation')
     }
   }
 }

@@ -1,6 +1,9 @@
+// SIDEBAR LINKS
 .sidebar-links
   > li
     margin: 6px 0
+    width: 95%
+    margin-left: 2.5%
 
     .sidebar-sub-headers
       margin-top: 5px
@@ -18,7 +21,20 @@ a.sidebar-link
   &.active
     border-left-color var(--accent-color)
 
+// SIDEBAR BUTTON
+.sidebar-button
+  padding: 1.2rem 1.3rem
+  top: 0.7rem
+  .icon
+    position: absolute
+
+// MOBILE
 @media (max-width: $MQMobile)
+  .sidebar-button
+    display: flex
+    justify-content: center
+    align-items: center
+
   .theme-container.sidebar-open .sidebar
     visibility: visible
 
