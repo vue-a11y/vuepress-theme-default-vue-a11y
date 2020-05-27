@@ -61,10 +61,6 @@ html, body, .navbar, .sidebar, .links, .sidebar-link, .nav-link
   background-color: var(--bg)
   color: var(--color)
 
-:focus
-  outline: 2px solid var(--outline-color)
-  outline-offset: 3px
-
 a, .edit-link > a 
   color: var(--text-color-link)
 
@@ -83,3 +79,13 @@ h2
 .page code 
   background-color: var(--bg-code)
   color: var(--text-color-code)
+
+// outline
+[tabindex]:not([tabindex="-1"]), a, button, input, select, textarea
+  outline: 2px solid transparent
+  outline-offset: 6px
+  transition: outline-offset .1s ease
+  
+:focus
+  outline-color: var(--outline-color)
+  outline-offset: 3px
