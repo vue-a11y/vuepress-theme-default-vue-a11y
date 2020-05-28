@@ -10,11 +10,6 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true,
-    colorMode: {
-      props: {
-        modes: [ 'light', 'dark', 'system', 'sepia' ]
-      }
-    },
     locales: {
       '/': {
         editLinkText: 'Edit this page on GitHub',

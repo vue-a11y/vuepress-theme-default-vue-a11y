@@ -1,21 +1,23 @@
+import merge from 'deepmerge'
+import { colorMode } from '../config/defaultThemeConfig'
+
 export default {
   computed: {
     configColorMode () {
-      if (!this.$themeConfig.colorMode || !Object.keys(this.$themeConfig.colorMode).length) return {}
-      return this.$themeConfig.colorMode
+      if (!this.$themeConfig.colorMode || !Object.keys(this.$themeConfig.colorMode).length) return colorMode
+      return merge(colorMode, this.$themeConfig.colorMode)
     },
 
     isColorModeEnabled () {
-      return typeof this.configColorMode.enabled === 'undefined' ? true : this.configColorMode.enabled
+      return this.configColorMode.enabled
     },
 
     isColorModeVisible () {
-      return typeof this.configColorMode.visible === 'undefined' ? true : this.configColorMode.visible
+      return this.configColorMode.visible
     },
 
     getColorModeProps () {
-      const props = this.configColorMode.props || {}
-      return { ...props, ...this.getColorModeAriaByLocale }
+      return { ...this.configColorMode.props, ...this.getColorModeAriaByLocale }
     },
 
     getColorModeAriaByLocale () {
