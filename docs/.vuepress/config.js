@@ -13,13 +13,6 @@ module.exports = {
     locales: {
       '/': {
         editLinkText: 'Edit this page on GitHub',
-        colorMode: {
-          ariaLabel: 'toggle to %cm mode color',
-          ariaLive: '%cm color mode is enabled'
-        },
-        announcer: {
-          complementRoute: 'has loaded'
-        },
         nav: [
           {
             text: 'Guide',

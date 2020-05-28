@@ -63,6 +63,25 @@ It is a temporary solution until we create a way to add the notice inside the ex
 
 [External Link](https://vue-a11y.com)
 
+```javascript
+// e.g. docs/.vuepress/config.js
+module.exports = {
+  theme: 'vuepress-theme-default-vue-a11y',
+  themeConfig: {
+    locales: {
+      '/': {
+        externalLinkTextSrOnly: 'opens in a new window'   // optional 
+      },
+      '/pt': {
+        externalLinkTextSrOnly: 'abre em uma nova janela'
+      },
+      '/es': {
+        externalLinkTextSrOnly: 'se abre en una nueva ventana'
+      }
+    }
+  }
+```
+
 ### References
 - [https://www.w3.org/TR/WCAG20-TECHS/G201.html](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 - [https://medium.com/@svinkle/why-let-someone-know-when-a-link-opens-a-new-window-8699d20ed3b1](https://medium.com/@svinkle/why-let-someone-know-when-a-link-opens-a-new-window-8699d20ed3b1)
