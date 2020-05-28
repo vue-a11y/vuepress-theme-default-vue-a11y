@@ -7,5 +7,6 @@ It does not replace the default vuepress theme, however, this theme contains mos
 ## Packages included
 
 - [vue-skip-to](https://github.com/vue-a11y/vue-skip-to)
+- [vue-axe](https://github.com/vue-a11y/vue-axe)
 - [@vue-a11y/dark-mode](https://github.com/vue-a11y/vue-dark-mode)
 - [@vue-a11y/announcer](https://github.com/vue-a11y/vue-announcer)
