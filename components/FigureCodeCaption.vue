@@ -1,7 +1,7 @@
-<template>
+<template functional>
   <figcaption
     class="figurecode__caption"
-    v-html="caption"
+    v-html="props.caption"
   />
 </template>
 

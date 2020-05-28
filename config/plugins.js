@@ -19,17 +19,17 @@ module.exports = [
         if (tokens[idx].nesting === 1) {
           caption = m ? md.utils.escapeHtml(m[1]) : ''
           return `
-          <figure-code caption="${caption}">
+          <FigureCode caption="${caption}">
             <div slot="content">
         `
         } else {
           return `
             </div>
-            <figure-code-caption
+            <FigureCodeCaption
               slot="caption"
               caption="${caption}"
             />            
-          </figure-code>
+          </FigureCode>
         `
         }
       }

@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <!-- eslint-disable vuejs-accessibility/no-redundant-roles -->
 
   <!-- role="figure" for IE11 screen reader support -->
@@ -6,7 +6,7 @@
   <!-- see more: https://www.scottohara.me/blog/2019/01/21/how-do-you-figure.html#wrapping-up -->
   <figure
     role="figure"
-    :aria-label="caption"
+    :aria-label="props.caption"
     class="figurecode teste-fig"
   >
     <slot name="content" />
