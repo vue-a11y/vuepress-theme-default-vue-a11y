@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.8...v0.1.9) (2020-05-28)
+
+
+### Features
+
+* **Axe:** using defaultConfig to axe and add docs ([5720ca7](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/5720ca79694e66a9c101bd4f10bf3d791b7c72d2))
+* **Axe:** ([8933742](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/8933742dc6430407aa3fd273cf2d4f85faf3a8a3))
+* **ColorMode:** using defaultConfig to colorMode ([0316f46](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/0316f460de13ccb9c81f1341307745b21934edfe))
+* **docs:** Add how to create a new theme color ([cfc77e3](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/cfc77e3e21ddb2b0e3be09fd3e38be10d8ed33a0))
+* **Open a new window:** Add warning in external link markdown plugin ([9d4c803](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/9d4c80355dd5060852c808366a5e9e7dd9151e36))
+
+
+### Bug Fixes
+
+* Register WarningOpenLinkNewWindow locally ([328b3ef](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/328b3ef822ccfee0f1477e1aad753fd9f6af156d))
+* toggle sidebar by keybord events ([70c754a](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/70c754a04791f04ea020b2dad3082343058684cb))
+* **markdown-it-anchor:** Add aria-label in anchors ([1ca5a57](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/1ca5a5754c3ec44862f655732dc3c50179687875))
+* **styles:** require content in override ([02efaa9](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/02efaa98248c5fe9dd2f3b33b029a82d9d6e4830))
+* added visibility hidden sidebar when mobile to avoid focusing on links while hidden ([dfe0a62](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/dfe0a6222f650365c812f5fa6501e4d5ba88f85d))
+
 ### [0.1.8](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.5...v0.1.8) (2020-05-25)
 
 
