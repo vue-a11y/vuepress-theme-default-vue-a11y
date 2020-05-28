@@ -3,10 +3,15 @@ import VueDarkMode from '@vue-a11y/dark-mode'
 import 'a11y-css-reset/combo.css'
 import merge from 'deepmerge'
 import VueSkipTo from 'vue-skip-to'
+import WarningOpenLinkNewWindow from './components/WarningOpenLinkNewWindow.vue'
 import { axe as axeDefaultConfig } from './config/defaultThemeConfig'
 import { isObject } from './utils'
 
 export default ({ Vue, router, isServer, siteData }) => {
+  // built-in components
+  Vue.component('WarningOpenLinkNewWindow', WarningOpenLinkNewWindow)
+
+  // Development
   if (process.env.NODE_ENV === 'development') {
     const axeConfig = siteData.themeConfig.axe && isObject(siteData.themeConfig.axe) ? merge(axeDefaultConfig, siteData.themeConfig.axe) : axeDefaultConfig
     if (axeConfig.enabled) {
@@ -14,6 +19,7 @@ export default ({ Vue, router, isServer, siteData }) => {
       Vue.use(VueAxe, axeConfig.options)
     }
   }
+  // Client only
   if (!isServer) {
     Vue.use(VueSkipTo)
     Vue.use(VueDarkMode)
