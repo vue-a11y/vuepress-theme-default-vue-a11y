@@ -83,7 +83,6 @@ export default {
 }
 </script>
 
-<style lang="stylus" src="../styles/content.styl"></style>
 <style lang="stylus" src="../styles/override/index.styl"></style>
 <style lang="stylus">
 .btn-color-mode
