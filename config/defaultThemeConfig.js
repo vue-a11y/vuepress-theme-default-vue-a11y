@@ -5,3 +5,7 @@ export const colorMode = {
     modes: ['light', 'dark', 'system', 'sepia']
   }
 }
+
+export const axe = {
+  enabled: true
+}

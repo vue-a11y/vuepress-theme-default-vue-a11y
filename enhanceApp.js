@@ -1,12 +1,18 @@
 import VueAnnouncer from '@vue-a11y/announcer'
 import VueDarkMode from '@vue-a11y/dark-mode'
 import 'a11y-css-reset/combo.css'
+import merge from 'deepmerge'
 import VueSkipTo from 'vue-skip-to'
+import { axe as axeDefaultConfig } from './config/defaultThemeConfig'
+import { isObject } from './utils'
 
-export default ({ Vue, router, isServer }) => {
+export default ({ Vue, router, isServer, siteData }) => {
   if (process.env.NODE_ENV === 'development') {
-    const VueAxe = require('vue-axe').default
-    Vue.use(VueAxe)
+    const axeConfig = siteData.themeConfig.axe && isObject(siteData.themeConfig.axe) ? merge(axeDefaultConfig, siteData.themeConfig.axe) : axeDefaultConfig
+    if (axeConfig.enabled) {
+      const VueAxe = require('vue-axe').default
+      Vue.use(VueAxe, axeConfig.options)
+    }
   }
   if (!isServer) {
     Vue.use(VueSkipTo)

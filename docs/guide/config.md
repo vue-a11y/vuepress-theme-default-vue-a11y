@@ -63,10 +63,6 @@ module.exports = {
   }
 ```
 
-## Skip to
-
-Pretty soon
-
 ## Announcer
 
 The [@vue-a11y/announcer](https://github.com/vue-a11y/vue-announcer) provides an easy way for people using screen readers to know what’s going on in your app.
@@ -104,3 +100,31 @@ module.exports = {
     }
   }
 ```
+
+## Axe
+
+We use the `axe` property in `$themeConfig` to customize the vue-axe package.
+
+```javascript
+// e.g. docs/.vuepress/config.js
+module.exports = {
+  theme: 'vuepress-theme-default-vue-a11y',
+  // ...
+  themeConfig: {
+    axe: {
+      enabled: true,
+      options: {
+        clearConsoleOnUpdate: true
+      }
+    }
+  }
+```
+
+::: tip
+See more config options available in VueAxe:  
+[https://github.com/vue-a11y/vue-axe#configuration](https://github.com/vue-a11y/vue-axe#configuration)
+:::
+
+## Skip to
+
+Pretty soon
