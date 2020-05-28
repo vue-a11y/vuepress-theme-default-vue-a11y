@@ -3,7 +3,7 @@
     <ClientOnly>
       <VueSkipTo />
     </ClientOnly>
-    <ParentLayout>
+    <ParentLayout ref="layout">
       <ClientOnly slot="sidebar-top">
         <VueDarkMode
           v-if="isColorModeEnabled"
@@ -66,7 +66,9 @@ export default {
       const el = document.querySelector('.sidebar-button')
       if (!el) return
       el.setAttribute('tabindex', 0)
+      el.setAttribute('role', 'button')
       el.setAttribute('aria-label', 'Open Sidebar Navigation')
+      el.addEventListener('keydown', ({ keyCode }) => { if ([13, 32].includes(keyCode)) this.$refs.layout.toggleSidebar() })
     }
   }
 }
