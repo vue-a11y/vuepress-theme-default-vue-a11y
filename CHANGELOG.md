@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.10...v0.1.11) (2020-06-02)
+
+
+### Bug Fixes
+
+* bump up vue-axe to 2.3.0 ([f9c7e54](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/commit/f9c7e54ad7f46ce481bbd46def237673b622ff2f))
+
 ### [0.1.10](https://github.com/vue-a11y/vuepress-theme-default-vue-a11y/compare/v0.1.9...v0.1.10) (2020-05-28)
 
 
