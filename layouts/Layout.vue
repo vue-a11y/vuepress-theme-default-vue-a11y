@@ -5,7 +5,7 @@
     </ClientOnly>
     <ParentLayout ref="layout">
       <ClientOnly slot="sidebar-top">
-        <VueDarkMode
+        <DarkMode
           v-if="isColorModeEnabled"
           v-show="isColorModeVisible"
           class="btn-color-mode"
@@ -14,7 +14,7 @@
           <template v-slot="{ mode }">
             Color mode: <span data-cy="color-mode">{{ mode }}</span>
           </template>
-        </VueDarkMode>
+        </DarkMode>
       </ClientOnly>
       <ClientOnly slot="page-bottom">
         <VueAnnouncer />

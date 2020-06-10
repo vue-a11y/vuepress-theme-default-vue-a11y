@@ -3,6 +3,7 @@ module.exports = {
   title: 'Vue A11y theme',
   head: [
     ['meta', { name: 'theme-color', content: '#fff' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }]
   ],
   themeConfig: {
     home: false,

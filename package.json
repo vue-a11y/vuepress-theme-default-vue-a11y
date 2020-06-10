@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@vue-a11y/announcer": "^2.0.2",
-    "@vue-a11y/dark-mode": "^0.2.0",
+    "@vue-a11y/dark-mode": "^1.0.0",
     "a11y-css-reset": "^1.2.0",
     "axe-core": "^3.5.4",
     "vue-axe": "^2.3.0",
