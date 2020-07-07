@@ -3,13 +3,6 @@ let caption = ''
 
 module.exports = [
   [
-    'vuepress-plugin-code-copy',
-    {
-      staticIcon: true,
-      color: 'currentColor'
-    }
-  ],
-  [
     'container',
     {
       type: 'figurecode',

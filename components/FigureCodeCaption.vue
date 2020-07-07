@@ -8,6 +8,7 @@
 <script>
 export default {
   name: 'FigureCodeCaption',
+
   props: {
     caption: {
       type: String,

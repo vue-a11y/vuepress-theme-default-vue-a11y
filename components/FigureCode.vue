@@ -17,6 +17,7 @@
 <script>
 export default {
   name: 'FigureCode',
+
   props: {
     caption: {
       type: String,
