@@ -9,6 +9,7 @@
   --bg-code-block: $bgCodeBlock
   --bg-tip-warning: $bgTipWarning
   --bg-tip-danger: $bgTipDanger
+  --bg-sidebar: $sidebarBg
   --accent-color: $accentColor
   --color: $textColor
   --color-light: lighten($textColor, 26%)
@@ -57,11 +58,17 @@ html.sepia-mode
   --border-color: $sepiaBorderColor
   --outline-color: $sepiaOutlineColor
 
-html, body, .navbar, .sidebar, .links, .sidebar-link, .nav-link 
-  background-color: var(--bg)
-  color: var(--color)
+*, *:before, *:after
+ box-sizing border-box
 
-a, .edit-link > a 
+html, body
+  font-family $fontFamily
+  background-color var(--bg)
+  color var(--color)
+
+a
+  font-weight 500
+  text-decoration: none;
   color: var(--text-color-link)
 
 a > .icon.outbound
@@ -89,3 +96,14 @@ h2
 :focus, .sidebar-button:focus
   outline-color: var(--outline-color)
   outline-offset: 3px
+
+.theme-container
+  display grid
+  grid-template-columns 1fr
+  grid-template-rows 60px calc(100vh - 60px)
+
+  @media (min-width: $MQMobile)
+    grid-template-columns 16.4rem 1fr
+  
+  @media (min-width: $MQNarrow)
+    grid-template-columns 20rem 1fr

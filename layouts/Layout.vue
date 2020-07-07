@@ -1,93 +1,136 @@
 <template>
-  <div>
-    <ClientOnly>
-      <VueSkipTo />
-    </ClientOnly>
-    <ParentLayout ref="layout">
-      <ClientOnly slot="sidebar-top">
-        <DarkMode
-          v-if="isColorModeEnabled"
-          v-show="isColorModeVisible"
-          class="btn-color-mode"
-          v-bind="getColorModeProps"
-        >
-          <template v-slot="{ mode }">
-            Color mode: <span data-cy="color-mode">{{ mode }}</span>
-          </template>
-        </DarkMode>
-      </ClientOnly>
-      <ClientOnly slot="page-bottom">
-        <VueAnnouncer />
-      </ClientOnly>
-    </ParentLayout>
+  <div
+    class="theme-container"
+    :class="pageClasses"
+    @touchstart="onTouchStart"
+    @touchend="onTouchEnd"
+  >
+    <TheHeading
+      v-if="shouldShowNavbar"
+      :sidebar-open="isSidebarOpen"
+      @toggle-sidebar="toggleSidebar"
+    />
+
+    <TheSidebar
+      :items="sidebarItems"
+      :sidebar-open="isSidebarOpen"
+      @toggle-sidebar="toggleSidebar"
+    />
+
+    <main
+      id="main"
+      class="main"
+    >
+      <Home v-if="$page.frontmatter.home" />
+
+      <Page
+        v-else
+        :sidebar-items="sidebarItems"
+      >
+        <template #top>
+          <slot name="page-top" />
+        </template>
+        <template #bottom>
+          <slot name="page-bottom" />
+        </template>
+      </Page>
+    </main>
   </div>
 </template>
 
 <script>
-import colorModeMixin from '../mixins/colorMode'
-import ParentLayout from '@parent-theme/layouts/Layout.vue'
+
+import Home from '@theme/views/Home.vue'
+import Page from '@theme/views/Page.vue'
+import TheHeading from '@theme/components/TheHeading'
+import TheSidebar from '@theme/components/TheSidebar'
+
+import { resolveSidebarItems } from '@theme/util'
 
 export default {
+  name: 'Layout',
+
   components: {
-    ParentLayout
+    Home,
+    Page,
+    TheHeading,
+    TheSidebar
   },
 
-  mixins: [colorModeMixin],
-
-  watch: {
-    $route: 'init'
+  data () {
+    return {
+      isSidebarOpen: false
+    }
   },
 
-  mounted () {
-    this.init()
+  computed: {
+    shouldShowNavbar () {
+      const { themeConfig } = this.$site
+      const { frontmatter } = this.$page
+      if (
+        frontmatter.navbar === false ||
+        themeConfig.navbar === false) {
+        return false
+      }
+      return (
+        this.$title ||
+        themeConfig.logo ||
+        themeConfig.repo ||
+        themeConfig.nav ||
+        this.$themeLocaleConfig.nav
+      )
+    },
+
+    shouldShowSidebar () {
+      const { frontmatter } = this.$page
+      return (
+        !frontmatter.home &&
+        frontmatter.sidebar !== false &&
+        this.sidebarItems.length
+      )
+    },
+
+    sidebarItems () {
+      return resolveSidebarItems(
+        this.$page,
+        this.$page.regularPath,
+        this.$site,
+        this.$localePath
+      )
+    },
+
+    pageClasses () {
+      const userPageClass = this.$page.frontmatter.pageClass
+      return [
+        {
+          'no-navbar': !this.shouldShowNavbar,
+          'no-sidebar': !this.shouldShowSidebar
+        },
+        userPageClass
+      ]
+    }
   },
 
   methods: {
-    init () {
-      this.$nextTick(() => {
-        this.setMainId()
-        this.setComplementRouteToAnnouncer()
-        this.setTabIndexSidebarButton()
-      })
+    toggleSidebar (to) {
+      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      this.$emit('toggle-sidebar', this.isSidebarOpen)
     },
 
-    setMainId () {
-      const main = document.getElementsByTagName('main')
-      if (main.length) main[0].setAttribute('id', 'main')
-    },
-
-    setComplementRouteToAnnouncer () {
-      if (this.$themeLocaleConfig.announcer) {
-        this.$announcer.setComplementRoute(this.$themeLocaleConfig.announcer.complementRoute)
+    onTouchStart (e) {
+      this.touchStart = {
+        x: e.changedTouches[0].clientX,
+        y: e.changedTouches[0].clientY
       }
     },
 
-    setTabIndexSidebarButton () {
-      const el = document.querySelector('.sidebar-button')
-      if (!el) return
-      el.setAttribute('tabindex', 0)
-      el.setAttribute('role', 'button')
-      el.setAttribute('aria-label', 'Open Sidebar Navigation')
-      el.addEventListener('keydown', ({ keyCode }) => { if ([13, 32].includes(keyCode)) this.$refs.layout.toggleSidebar() })
+    onTouchEnd (e) {
+      const dx = e.changedTouches[0].clientX - this.touchStart.x
+      const dy = e.changedTouches[0].clientY - this.touchStart.y
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+        this.toggleSidebar(!!(dx > 0 && this.touchStart.x <= 80))
+      }
     }
   }
 }
 </script>
-
-<style lang="stylus" src="../styles/override/index.styl"></style>
-<style lang="stylus">
-.btn-color-mode
-  margin-top: 2.75rem
-  margin-left: 1.5rem
-  &.vue-dark-mode
-    border: 2px solid var(--border-color)
-    background-color: var(--bg-secondary)
-    border-radius: 2rem
-    padding: 10px 16px
-    font-weight: bold
-    outline: none
-    &:focus
-      border-color: var(--accent-color)
-    span
-      text-transform: capitalize
-</style>
