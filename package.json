@@ -22,27 +22,25 @@
   "license": "MIT",
   "dependencies": {
     "@vue-a11y/announcer": "^2.0.2",
-    "@vue-a11y/dark-mode": "^1.0.0",
+    "@vue-a11y/dark-mode": "^1.1.0",
+    "@vue-a11y/skip-to": "^2.0.1",
     "a11y-css-reset": "^1.2.0",
-    "axe-core": "^3.5.4",
-    "vue-axe": "^2.3.0",
-    "vue-skip-to": "^1.0.6",
-    "vuepress-plugin-code-copy": "^1.0.6"
+    "axe-core": "^3.5.5",
+    "vue-axe": "^2.3.1"
   },
   "devDependencies": {
     "@vue/eslint-config-standard": "^5.1.2",
     "babel-eslint": "^10.1.0",
     "deepmerge": "^4.2.2",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint": "^7.4.0",
+    "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
-    "eslint-plugin-vuejs-accessibility": "^0.1.2",
-    "gh-pages": "^2.2.0",
+    "eslint-plugin-vuejs-accessibility": "^0.3.0",
+    "gh-pages": "^3.1.0",
     "standard-version": "^8.0.0",
-    "vuepress": "^1.5.0",
-    "watchpack": "^1.6.1"
+    "vuepress": "^1.5.2"
   }
 }
