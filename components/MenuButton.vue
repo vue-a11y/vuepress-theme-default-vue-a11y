@@ -1,6 +1,6 @@
 <template functional>
   <button
-    class="menu-button"
+    class="menu-button reset-button"
     v-on="listeners"
   >
     {{ props.isOpen ? (parent.$themeLocaleConfig.menuButtonTextClose || 'CLOSE') : (parent.$themeLocaleConfig.menuButtonText || 'MENU') }}
@@ -25,9 +25,7 @@ export default {
   position relative
   left -8px
   display none
-  background-color transparent
   padding 8px
-  border: none
 
 @media (max-width: $MQMobile)
   .menu-button
