@@ -18,6 +18,56 @@ module.exports = {
           {
             text: 'Guide',
             link: '/guide/'
+          },
+          {
+            text: 'Demo',
+            link: '/demo/'
+          },
+          {
+            text: 'Dropdown',
+            ariaLabel: 'Dropdown',
+            items: [
+              {
+                text: 'CLI',
+                link: '/api/cli.html'
+              },
+              {
+                text: 'Node',
+                link: '/api/node.html'
+              }
+            ]
+          },
+          {
+            text: 'Dropdown2',
+            ariaLabel: 'Dropdown2',
+            items: [
+              {
+                text: 'API',
+                items: [
+                  {
+                    text: 'CLI',
+                    link: '/api/cli.html'
+                  },
+                  {
+                    text: 'Node',
+                    link: '/api/node.html'
+                  }
+                ]
+              },
+              {
+                text: 'Miscellaneous',
+                items: [
+                  {
+                    text: 'Migrate from 0.x',
+                    link: '/miscellaneous/migration-guide.html'
+                  },
+                  {
+                    text: 'Changelog',
+                    link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
+                  }
+                ]
+              }
+            ]
           }
         ],
         sidebar: [

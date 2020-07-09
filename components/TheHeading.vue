@@ -31,19 +31,21 @@
         <span>SEARCH</span>
       </div>
       <div class="header-nav">
-        <span>NAVIGATION</span>
+        <NavLinks />
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import NavLinks from '@theme/components/NavLinks'
 import MenuButton from '@theme/components/MenuButton'
 
 export default {
   name: 'TheHeader',
 
   components: {
+    NavLinks,
     MenuButton
   },
 
@@ -67,6 +69,7 @@ export default {
       display flex
       padding 0 1.5rem
       justify-content space-between
+      height 100%
 
       > div
         align-self center
@@ -87,6 +90,11 @@ export default {
 
         @media (max-width: $MQMobile)
           display none
+
+  &-logo > a
+    position relative
+    padding 4px
+    left -4px
 
   .site-name
     font-size 1.3rem
